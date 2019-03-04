@@ -1,0 +1,147 @@
+$result-color: #f5f2f2;
+$green-color: #18d4a3;
+
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+
+//global style
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body {background-color: #18d4a3}
+
+//container of all content
+.container {
+  background-color: #FFF;
+  max-width: 300px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: 50px;
+  transition: .3s;
+}
+
+//upper bar
+.upper-bar {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding: 10px;
+  background: $result-color;
+  border-bottom: 1px solid #e2e2e2;
+  transition: .3s;
+  
+  .check-box {
+    width: 30px;
+    height: 15px;
+    background: $result-color;
+    border-radius: 25px;
+    position: relative;
+    transition: .3s;
+    box-shadow: 0px 0px 5px #484040 inset;
+    
+    .pointer {
+      position: absolute;
+      width: 15px;
+      height: 100%;
+      background-color: #FFF;
+      border-radius: 50%;
+      border: 1px solid #d0d7d7;
+      transition: .3s;
+      box-shadow: 0px 0px 5px #484040;
+    }
+  }
+  .checked {
+    background-color: $green-color;
+    .pointer {
+      right: 0
+    }
+  }
+}
+
+//monitor
+.result {
+  height: 150px;
+  overflow: hidden;
+  background-color: $result-color;
+  font-size: 30px;
+  font-family: 'Russo One', sans-serif;
+  word-break: break-word;
+  margin-bottom: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  transition: .3s;
+}
+
+//buttons
+.buttons {
+  display: grid;
+  grid-gap: 10px;
+  padding: 10px;
+  
+  .row {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px;
+    justify-items: center;
+    
+    button {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 25px;
+      outline: none;
+      background-color: transparent;
+      border: none;
+      transition: .2s;
+      
+      &:active {
+        background-color: $result-color;
+        transform: perspective(100px) translateZ(10px);
+      }
+    }
+    .operator {background-color: $result-color}
+    .out {background-color: $green-color}
+  }
+}
+
+//black mode
+.black-mode {
+  background-color: #2e3951;
+  
+  .upper-bar {
+    background: #212b41;
+    border-bottom-color: #2e3951;
+}
+  
+  .result {
+    background-color: #212b41;
+    color: $green-color
+  }
+  
+  .buttons {
+    .row {
+      button {
+        color: #829391;
+        
+        &:active {background-color: #212b41}
+    }
+      .operator {
+        background-color: #212b41;
+        color: $green-color;
+        }
+      .out {
+        background-color: $green-color;
+        color: black
+      }
+    }
+  }  
+}

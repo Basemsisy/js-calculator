@@ -1,0 +1,52 @@
+doctype
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		//stylesheet
+		link(rel="stylesheet" href="css/style.css")
+		title Js calculator
+	body
+		//container of all content
+		.container
+			//upper bar
+			.upper-bar
+				.check-box(onclick="changeCheck(this)" data-check="0")
+					.pointer
+			//result monitor
+			.result
+
+			//buttons
+			.buttons
+				//buttons row [1]
+				.row
+					button(class="operator delete") c
+					button(class="operator back") «
+					button(class="operator in") %
+					button(class="operator in") /
+				//buttons row [2]
+				.row
+					button(class="in") 7
+					button(class="in") 8
+					button(class="in") 9
+					button(class="operator in") *
+				//buttons row [3]
+				.row
+					button(class="in") 4
+					button(class="in")(class="in") 5
+					button(class="in") 6
+					button(class="operator in") -
+				//buttons row [4]
+				.row
+					button(class="in") 1
+					button(class="in") 2
+					button(class="in") 3
+					button(class="operator in") +
+				//buttons row [5]
+				.row
+					button(class="in") 0
+					button(class="in") .
+					button(class="in" disabled) 
+					button(class="operator out") =
+		script(src="js/script.js")

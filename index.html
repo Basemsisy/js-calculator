@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--stylesheet-->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Js calculator</title>
+  </head>
+  <body>
+    <!--container of all content-->
+    <div class="container">
+      <!--upper bar-->
+      <div class="upper-bar">
+        <div class="check-box" onclick="changeCheck(this)" data-check="0">
+          <div class="pointer"></div>
+        </div>
+      </div>
+      <!--result monitor-->
+      <div class="result"></div>
+      <!--buttons-->
+      <div class="buttons">
+        <!--buttons row [1]-->
+        <div class="row">
+          <button class="operator delete">c</button>
+          <button class="operator back">«</button>
+          <button class="operator in">%</button>
+          <button class="operator in">/</button>
+        </div>
+        <!--buttons row [2]-->
+        <div class="row">
+          <button class="in">7</button>
+          <button class="in">8</button>
+          <button class="in">9</button>
+          <button class="operator in">*</button>
+        </div>
+        <!--buttons row [3]-->
+        <div class="row">
+          <button class="in">4</button>
+          <button class="in in">5</button>
+          <button class="in">6</button>
+          <button class="operator in">-</button>
+        </div>
+        <!--buttons row [4]-->
+        <div class="row">
+          <button class="in">1</button>
+          <button class="in">2</button>
+          <button class="in">3</button>
+          <button class="operator in">+</button>
+        </div>
+        <!--buttons row [5]-->
+        <div class="row">
+          <button class="in">0</button>
+          <button class="in">.</button>
+          <button class="in" disabled> </button>
+          <button class="operator out">=</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
